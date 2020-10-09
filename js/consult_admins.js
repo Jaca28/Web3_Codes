@@ -1,9 +1,11 @@
 
-
+$(document).ready( function () {
+    $('#tabla_admins').DataTable();
+} );
 function consult_admins(){
     proveedores.IDa( (err, IDa_res) => {
         if (IDa_res) {
-            console.log("IDa:"+IDa);
+            console.log("IDa:"+IDa_res);
             admins_look_up(IDa_res);
         }
         if (err) {
