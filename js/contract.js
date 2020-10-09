@@ -6,7 +6,7 @@ if (typeof web3 !== 'undefined') {
 }
 ethereum.enable();
 web3.eth.defaultAccount = web3.eth.coinbase;
-var MeetContract = web3.eth.contract([{
+var proveedores_contract = web3.eth.contract([{
         "constant": false,
         "inputs": [{
             "name": "_IDj",
@@ -779,5 +779,5 @@ var MeetContract = web3.eth.contract([{
     }
 ]);
 
-var meetBITS = MeetContract.at('0x111dE0761Fe69dfFA4e0AAa85b1F17A67b1fA16B');
-console.log(meetBITS);
+var proveedores = proveedores_contract.at('0x111dE0761Fe69dfFA4e0AAa85b1F17A67b1fA16B');
+console.log(proveedores);
