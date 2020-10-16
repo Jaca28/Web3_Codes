@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/nutresa.png">
+    <title>Usuarios</title>
+    <!-- Custom CSS -->
+    <link href="/style/style.min.css" rel="stylesheet">
+
+    <!-- Scripts de Data Tables -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript Datatables -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <!-- Compiled and minified CSS Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body onload="consult_proveedores()">
+    <div class="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Mis Proveedores Nutresa</h4>
+                    <h6 class="card-subtitle">Listado de Proveedores</h6>
+                    <table id="tabla_proveedores" class="table table-bordered table-hover toggle-circle" data-page-size="7">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>nit</th>
+                                <th>ciudad</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <div class="text-right">
+                                        <ul class="pagination">
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- All Required js -->
+        <!-- ============================================================== -->
+
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="/assets/popper.min.js "></script>
+        <script src="/assets/bootstrap.min.js "></script>
+        <script src="/js/contract.js"></script>
+        <script src="/js/consult_proveedores.js"></script>
+        <script src="/js/register.js"></script>
+        <!-- ============================================================== -->
+        <!-- This page plugin js -->
+
+        <!-- ============================================================== -->
+        <script>
+            $('[data-toggle="tooltip "]').tooltip();
+            $(".preloader ").fadeOut();
+        </script>
+</body>
+
+</html>
