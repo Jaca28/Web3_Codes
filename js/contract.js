@@ -1,11 +1,19 @@
+//Definir red - Metamask
+
 if (typeof web3 !== 'undefined') {
-    web3 = new Web3(web3.currentProvider);
+    web3 = new Web3(web3.currentProvider); //Se conecta al proveedor disponible, en este caso metamask
 } else {
     // set the provider you want from Web3.providers
-    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); //Se coencta al mismo pc
 }
+
+//Solicita permisos para conectarse
 ethereum.enable();
+
+//Busca la dirección activa en metamask
 web3.eth.defaultAccount = web3.eth.coinbase;
+
+//Define el ABI del contrato (lo que sale del compilador) - permite que el software reconozca las funciones disponibles-
 var proveedores_contract = web3.eth.contract([{
         "inputs": [],
         "stateMutability": "nonpayable",
@@ -303,5 +311,6 @@ var proveedores_contract = web3.eth.contract([{
     }
 ]);
 
+//Instanciar el contrato definido anteriormente y relacioanrlo con la direccipon donde se encuentra activo
 var proveedores = proveedores_contract.at('0x3ecD2b5D67694240945c66aeb356dDcFbf0Df654');
 console.log(proveedores);
